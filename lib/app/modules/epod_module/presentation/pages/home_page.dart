@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:nasa_app/app/modules/epod_module/presentation/widgets/apod_item.dart';
+import 'package:nasa_app/app/modules/epod_module/presentation/widgets/my_app_bar.dart';
 import '../widgets/personal_error_widget.dart';
 import '../controllers/home_controller.dart';
 
@@ -22,6 +24,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: MyAppBar(),
       body: Observer(builder: (_) {
         if (controller.apodsStore.loading) {
           return const Center(
@@ -31,11 +34,17 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
         if (controller.apodsStore.hasError) {
           return PersonalError(onTryAgain: controller.getApods);
         }
-        return ListView.builder(
+        return Padding(
+          padding: const EdgeInsets.all(8),
+          child: ListView.builder(
             itemCount: controller.apodsStore.apods.length,
             itemBuilder: (_, index) {
-              return Text(controller.apodsStore.apods[index].title);
-            });
+              return ApodItem(
+                apod: controller.apodsStore.apods[index],
+              );
+            },
+          ),
+        );
       }),
     );
   }

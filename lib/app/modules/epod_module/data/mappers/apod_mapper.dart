@@ -13,7 +13,7 @@ class ApodMapper implements Mapper<ApodEntity, ApodModel> {
   toEntity(ApodModel object) => ApodEntity(
         copyright: object.copyright ?? '',
         date: DateTime.parse(object.date!),
-        hdurl: object.hdurl ?? '',
+        hdurl: object.url ?? '',
         title: object.title ?? '',
       );
 }
