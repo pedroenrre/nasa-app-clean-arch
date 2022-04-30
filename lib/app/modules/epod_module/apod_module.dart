@@ -7,6 +7,7 @@ import 'package:nasa_app/app/modules/epod_module/data/mappers/apod_mapper.dart';
 import 'package:nasa_app/app/modules/epod_module/data/repositories/apods_repository_imp.dart';
 import 'package:nasa_app/app/modules/epod_module/domain/repositories/apods_repository.dart';
 import 'package:nasa_app/app/modules/epod_module/domain/usecases/get_local_list_usecase_imp.dart';
+import 'package:nasa_app/app/modules/epod_module/presentation/pages/details_page.dart';
 import 'package:nasa_app/app/modules/epod_module/presentation/stores/apods_store.dart';
 import 'domain/usecases/interfaces/get_local_list_usecase.dart';
 import 'presentation/pages/home_page.dart';
@@ -64,6 +65,12 @@ class ApodModule extends Module {
           transition: TransitionType.fadeIn,
           // child: (context, args) => const JourneyHome(),
           child: (context, args) => const HomePage(),
+        ),
+        ChildRoute(
+          '/details',
+          transition: TransitionType.fadeIn,
+          // child: (context, args) => const JourneyHome(),
+          child: (context, args) => DetailsPage(item: args.data),
         ),
       ];
 }

@@ -15,5 +15,6 @@ class ApodMapper implements Mapper<ApodEntity, ApodModel> {
         date: DateTime.parse(object.date!),
         hdurl: object.url ?? '',
         title: object.title ?? '',
+        description: object.explanation ?? '',
       );
 }
