@@ -19,10 +19,12 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return hasError
-        ? PersonalError(onTryAgain: () {})
-        : const Center(
-            child: Text('Home'),
-          );
+    return Scaffold(
+      body: hasError
+          ? PersonalError(onTryAgain: () {})
+          : const Center(
+              child: Text('Home'),
+            ),
+    );
   }
 }

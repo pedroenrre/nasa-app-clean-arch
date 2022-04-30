@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'modules/epod_module/epod_module.dart';
+import 'modules/epod_module/apod_module.dart';
 import 'api.dart';
 
 class AppModule extends Module {
@@ -13,7 +13,7 @@ class AppModule extends Module {
   List<ModularRoute> get routes => [
         ModuleRoute(
           '/',
-          module: EpodModule(),
+          module: ApodModule(),
           // guards: [HomeGuard()],
         ),
       ];

@@ -2,7 +2,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'presentation/pages/home_page.dart';
 import 'presentation/controllers/home_controller.dart';
 
-class EpodModule extends Module {
+class ApodModule extends Module {
   @override
   List<Bind> get binds => [
         // DATABASES
