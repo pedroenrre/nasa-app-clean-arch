@@ -1,16 +1,72 @@
-# nasa_app
+# Projeto Nasa App
 
-A new Flutter project.
+![Concept:](https://img.shields.io/badge/Concept-MVP-green)
 
-## Getting Started
+Aplicativo mobile para mostrar fotos astronômicas disponibilizadas pela Nasa (APOD API)
 
-This project is a starting point for a Flutter application.
+<p align="center"> • 
+ <a href="#features">Features</a> •
+ <a href="#tecnologias">Tecnologias</a> • 
+ <a href="#packages">Packages</a> • 
+ <a href="#desenvolvedores">Desenvolvedor</a> •
+ <a href="#licença">Licença</a>
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+## 🧩Features
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [x] Mobx como gerenciamento de estado principal;
+- [x] Gerenciamento de rotas e Injeção de depências com Flutter Modular;
+- [x] Consumo de dados via API com DIO;
+- [x] Custom Widgets;
+- [x] Clean architeture;
+- [ ] Testes unitários;
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Flutter](https://flutter.dev/)
+- [Dart](https://dart.dev/)
+
+## 📦Packages
+
+Os seguintes packages foram utilizados no projeto:
+
+- [Flutter Modular](https://pub.dev/packages?q=flutter_modular)
+- [Mobx](https://pub.dev/packages/mobx)
+  - [Flutter Mobx](https://pub.dev/packages/flutter_mobx)
+  - [Mobx Codegen](https://pub.dev/packages/mobx_codegen)
+- [Dio](https://pub.dev/packages/dio)
+
+## 📱Desenvolvedor
+
+<table>
+<tr>
+
+<td>
+<div align="center">
+<a href="https://github.com/pedroenrre">
+ <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4E03AQHPHYy0A_IJnw/profile-displayphoto-shrink_800_800/0/1544548714728?e=1655942400&v=beta&t=iAyuaelGr1QrDwl2Wa7KVld7FtJBJ_86iNUdCBWnf-Q" width="100px;" alt=""/>
+ <br />
+ <sub><b>Pedro Ferreira</b></sub></a> <a href="https://github.com/pedroenrre" title="Github"></a>
+<p>
+
+[![Linkedin Badge](https://img.shields.io/badge/-Pedro-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/pedro-ferreira-a825758b/)](https://www.linkedin.com/in/pedro-ferreira-a825758b/)
+[![Hotmail Badge](https://img.shields.io/badge/-Hotmail-0078D4?style=flat-square&logo=microsoft-outlook&logoColor=white&link=mailto:pedro_enrre@hotmail.com)](mailto:pedro_enrre@hotmail.com)
+
+</div>
+</td>
+
+</tr>
+</table>
+---
+
+## 📝Licença
+
+Este projeto esta sobe a licença [MIT](./LICENSE).
+
+---
+
+## Status
+
+![Status: Em desenvolvimento](https://img.shields.io/badge/Status-Em%20desenvolvimento-blue)
