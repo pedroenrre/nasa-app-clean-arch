@@ -8,7 +8,6 @@ class ApodsRemoteDataSource {
   ApodsRemoteDataSource(this.dio);
 
   Future getApods(DateTime initialDate, DateTime finalDate) async {
-    print(DateFormat('yyyy-MMdd').format(initialDate));
     try {
       final response = await dio.get('apod', queryParameters: {
         'start_date': DateFormat('yyyy-MM-dd').format(initialDate),
@@ -17,7 +16,6 @@ class ApodsRemoteDataSource {
       });
       return response.data;
     } catch (e) {
-      print(e);
       rethrow;
     }
   }
