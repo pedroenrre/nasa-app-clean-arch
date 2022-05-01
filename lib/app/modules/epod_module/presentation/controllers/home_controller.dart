@@ -11,6 +11,8 @@ class HomeController {
   );
 
   Future<void> getApods() async {
+    apodsStore.setLoading(true);
+    apodsStore.setHasError(false);
     try {
       final resp = await _getApodListUseCase(
           DateTime.parse('2022-04-01'), DateTime.now());

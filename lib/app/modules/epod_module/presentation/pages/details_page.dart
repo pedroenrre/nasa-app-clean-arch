@@ -1,11 +1,12 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:nasa_app/app/common/resources/app_colors.dart';
 import 'package:nasa_app/app/common/resources/app_fonts.dart';
 
 import 'package:nasa_app/app/modules/epod_module/domain/entities/apod_entity.dart';
+import 'package:nasa_app/app/modules/epod_module/presentation/widgets/image_widget.dart';
 import 'package:nasa_app/app/modules/epod_module/presentation/widgets/my_app_bar.dart';
-import 'package:shimmer/shimmer.dart';
 
 class DetailsPage extends StatelessWidget {
   final ApodEntity item;
@@ -26,23 +27,7 @@ class DetailsPage extends StatelessWidget {
               width: double.infinity,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
-                child: Image.network(
-                  item.hdurl,
-                  fit: BoxFit.cover,
-                  loadingBuilder: (context, child, loadingProgress) {
-                    if (loadingProgress == null) return child;
-                    return Shimmer.fromColors(
-                      baseColor: AppColors.grey,
-                      highlightColor: AppColors.white,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          color: Colors.grey,
-                        ),
-                      ),
-                    );
-                  },
-                ),
+                child: ImageWidget(url: item.hdurl),
               ),
             ),
             const SizedBox(height: 10),
