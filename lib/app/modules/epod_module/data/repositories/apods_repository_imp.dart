@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:nasa_app/app/common/mapper/mapper.dart';
 import 'package:nasa_app/app/modules/epod_module/data/datasources/local/apods_local_datasource.dart';
 import 'package:nasa_app/app/modules/epod_module/data/datasources/remote/apods_remote_datasource.dart';
@@ -33,20 +32,17 @@ class ApodsRepositoryImp implements ApodsRepository {
         list.add(_mapper.toEntity(apod));
       });
       log('SUCCESS API CALL >>>>>>');
-      log(list.length.toString());
     } catch (e) {
       log('ERROR >>>>>>');
       final data = await _apodsLocalDataSource.getSavedApods();
       if (data.isEmpty) throw ('No saved data');
       log('LOCAL DATA LIST>>>>>>');
-      log(data.length.toString());
       for (var e in data) {
         ApodModel apod = ApodModel.fromJson(e);
         list.add(_mapper.toEntity(apod));
       }
     }
     log('FINAL LIST>>>>>>>>');
-    log(list.length.toString());
     return list;
   }
 }

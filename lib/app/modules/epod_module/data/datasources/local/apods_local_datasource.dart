@@ -1,5 +1,4 @@
 import 'package:nasa_app/app/modules/epod_module/data/models/apod_model.dart';
-import 'package:nasa_app/app/modules/epod_module/domain/entities/apod_entity.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
