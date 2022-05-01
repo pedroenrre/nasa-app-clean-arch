@@ -17,6 +17,8 @@ Aplicativo mobile para mostrar fotos astronômicas disponibilizadas pela Nasa (A
 - [x] Mobx como gerenciamento de estado principal;
 - [x] Gerenciamento de rotas e Injeção de depências com Flutter Modular;
 - [x] Consumo de dados via API com DIO;
+- [x] Database local com sqflite;
+- [x] Modo offline;
 - [x] Custom Widgets;
 - [x] Clean architeture;
 - [ ] Testes unitários;
@@ -38,6 +40,8 @@ Os seguintes packages foram utilizados no projeto:
   - [Mobx Codegen](https://pub.dev/packages/mobx_codegen)
 - [Dio](https://pub.dev/packages/dio)
 - [Sqflite](https://pub.dev/packages/sqflite)
+- [Cached Network Image](https://pub.dev/packages/cached_network_image)
+- [Mask Text Input Formatter](https://pub.dev/packages/mask_text_input_formatter)
 
 ## 📱Desenvolvedor
 
