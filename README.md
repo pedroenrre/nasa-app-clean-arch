@@ -37,6 +37,7 @@ Os seguintes packages foram utilizados no projeto:
   - [Flutter Mobx](https://pub.dev/packages/flutter_mobx)
   - [Mobx Codegen](https://pub.dev/packages/mobx_codegen)
 - [Dio](https://pub.dev/packages/dio)
+- [Sqflite](https://pub.dev/packages/sqflite)
 
 ## 📱Desenvolvedor
 
