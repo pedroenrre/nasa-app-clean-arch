@@ -63,13 +63,11 @@ class ApodModule extends Module {
         ChildRoute(
           '/',
           transition: TransitionType.fadeIn,
-          // child: (context, args) => const JourneyHome(),
           child: (context, args) => const HomePage(),
         ),
         ChildRoute(
           '/details',
           transition: TransitionType.fadeIn,
-          // child: (context, args) => const JourneyHome(),
           child: (context, args) => DetailsPage(item: args.data),
         ),
       ];
