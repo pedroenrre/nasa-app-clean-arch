@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:intl/intl.dart';
-import 'package:nasa_app/app/common/resources/app_colors.dart';
 import 'package:nasa_app/app/common/resources/app_fonts.dart';
-
 import 'package:nasa_app/app/modules/epod_module/domain/entities/apod_entity.dart';
-import 'package:shimmer/shimmer.dart';
+import 'package:nasa_app/app/modules/epod_module/presentation/widgets/image_widget.dart';
 
 class ApodItem extends StatelessWidget {
   final ApodEntity apod;
@@ -30,23 +28,7 @@ class ApodItem extends StatelessWidget {
                 height: 200,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),
-                  child: Image.network(
-                    apod.hdurl,
-                    fit: BoxFit.cover,
-                    loadingBuilder: (context, child, loadingProgress) {
-                      if (loadingProgress == null) return child;
-                      return Shimmer.fromColors(
-                        baseColor: AppColors.grey,
-                        highlightColor: AppColors.white,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Colors.grey,
-                          ),
-                        ),
-                      );
-                    },
-                  ),
+                  child: ImageWidget(url: apod.hdurl),
                 ),
               ),
               const SizedBox(height: 10),
